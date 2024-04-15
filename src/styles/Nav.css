@@ -33,13 +33,12 @@ li {
     padding: 0 10px;
 }
 
-.container-logo {
-    margin-left: 3%;
-    color: #149ECA;
-    
-    
+.major-logo {
+    color: #149ECA; 
 }
-
+.container-logo{
+    margin-left: 5%;
+}
 .a-decoration {
     text-decoration: none;
     color: white;
@@ -50,6 +49,6 @@ li {
 }
 
 .icon {
-    width: 5%; /* Ajusta el tamaño de los logos en porcentaje */
-    height: auto; /* Para mantener la proporción */
+    width: 5%; 
+    height: auto; 
 }

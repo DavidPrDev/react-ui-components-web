@@ -8,7 +8,7 @@ export const Nav = () => {
     return (
         <header>
             <div className='container-logo'>
-                <Link className='a-decoration' to="/"><FaReact size={40} /></Link></div>
+                <Link className='major-logo' to="/"><FaReact size={40} /></Link></div>
             <nav>
                 <ul className='ul-content'>
                     <li>

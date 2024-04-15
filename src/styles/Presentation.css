@@ -1,0 +1,34 @@
+.container-presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    color:white;
+}
+.btn-container{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.btn-get-started{
+    margin-right: 25px;
+    background-color: #128db6;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+.npm-code{
+    background-color: #181f2b;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 7px;
+}
+.copy-icon{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
