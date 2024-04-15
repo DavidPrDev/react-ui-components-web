@@ -5,6 +5,7 @@
     align-items: center;
     margin-top: 10%;
     color:white;
+    text-align: center;
 }
 .btn-container{
     flex-direction: row;
