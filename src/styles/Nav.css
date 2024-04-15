@@ -1,0 +1,55 @@
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #12171f;
+    margin: 0;
+    color: white;
+    align-items: center;
+    padding: auto;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+ul {
+    
+    flex-direction: row;
+    list-style-type: none;
+    display: flex;
+    white-space: nowrap;
+}
+.ul-content{
+    padding-left: 10px; 
+}
+
+.ul-links {
+    margin-left: auto;
+   
+}
+
+li {
+    padding: 0 10px;
+}
+
+.container-logo {
+    margin-left: 3%;
+    color: #149ECA;
+    
+    
+}
+
+.a-decoration {
+    text-decoration: none;
+    color: white;
+}
+
+.a-decoration:hover {
+    color: #405677;
+}
+
+.icon {
+    width: 5%; /* Ajusta el tamaño de los logos en porcentaje */
+    height: auto; /* Para mantener la proporción */
+}
