@@ -3,5 +3,8 @@
     "btn-components": "Components",
     "sub-title":"A small library for react with variety of ui components",
     "change-lang":"Change language",
-    "title-instalation":"Installation"
+    "title-instalation":"Installation",
+    "txt-instalation":"To install the library you will need to run the following command.",
+    "copy":"copy"
+
 }

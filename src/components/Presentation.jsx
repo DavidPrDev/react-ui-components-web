@@ -7,6 +7,7 @@ export const Presentation = () => {
     const { t } = useTranslation();
 
     const textToCopy = 'npm install react-ui-components-dpr';
+
     return (
         <div className='container-presentation'>
             <h1>React-ui-components</h1>

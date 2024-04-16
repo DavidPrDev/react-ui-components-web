@@ -3,5 +3,7 @@
     "btn-components": "Componentes",
     "sub-title":"Una pequeña biblioteca para react con varios componentes de interfaz de usuario.",
     "change-lang":"Cambiar idioma",
-    "title-instalation":"Instalacion"
+    "title-instalation":"Instalacion",
+    "txt-instalation":"Para instalar la biblioteca, deberá ejecutar el siguiente comando.",
+    "copy":"copiar"
 }
