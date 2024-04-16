@@ -14,6 +14,8 @@
     "dev-route":"En la ruta de desarrollo esta pensado implementar mas componentes que se estas desarrollando como alguno de los siguientes:",
     "nav":"Barra de navegación",
     "form":"Formularios",
-    "btn":"Botones"
-    
+    "btn":"Botones",
+    "txt-modal":"Para usar este componente debemos importar este paquete:",
+    "txt-modal-btn":"En este caso deberemos crear un función para abrir el modal :",
+    "simple-props-modal":"Estas son las props mínimos que el componente necesita para funcionar."
 }

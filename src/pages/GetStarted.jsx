@@ -1,7 +1,7 @@
 import '../styles/GetStarted.css'
 import { useTranslation } from 'react-i18next';
 import { CodeContainer } from '../components/CodeContainer';
-import { function1 } from '../constants/constants';
+
 import { TutorialPill } from '../components/TutorialPill';
 
 import { HashLink } from 'react-router-hash-link';

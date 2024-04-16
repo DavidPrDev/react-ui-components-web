@@ -2,6 +2,7 @@ import '../styles/Components.css'
 import { useTranslation } from 'react-i18next';
 import { TutorialPill } from '../components/TutorialPill';
 import { CodeContainer } from '../components/CodeContainer';
+import { modalFunction, modalBtn, modalComponentOutConfirm } from '../constants/constants';
 
 export const Components = () => {
 
@@ -15,10 +16,19 @@ export const Components = () => {
 
                 <TutorialPill
                     title="Modal"
-                    text={t('txt-requisites')}
-                    component={<CodeContainer code={``} />}
-                    link={"https://vitejs.dev/guide/"}
+                    text={t('txt-modal')}
+                    component={<CodeContainer code={`import { Modal } from 'react-ui-components-dpr';`} />}
                     textLink={t('txt-vite-tutorial')}
+                />
+
+                <CodeContainer
+                    text={t('txt-modal-btn')}
+                    code={modalBtn}
+                />
+
+                <CodeContainer
+                    text={t('simple-props-modal')}
+                    code={modalComponentOutConfirm}
                 />
 
             </div>

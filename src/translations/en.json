@@ -14,5 +14,8 @@
     "dev-route":"In the development route, it is planned to implement more components that are being developed, such as any of the following:",
     "nav":"Navigation bar",
     "form":"Forms",
-    "btn":"Buttons"
+    "btn":"Buttons",
+    "txt-modal":"To use this component we must import this package",
+    "txt-modal-btn":"In this case we will have to create a function to open the modal:",
+    "simple-props-modal":"These are the minimum accessories that the component needs to function."
 }

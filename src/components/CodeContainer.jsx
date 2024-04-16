@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-export const CodeContainer = ({ text, code }) => {
+export const CodeContainer = ({ text = null, code }) => {
 
     const { t } = useTranslation();
 
