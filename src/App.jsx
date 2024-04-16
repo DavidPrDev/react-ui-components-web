@@ -1,8 +1,8 @@
 import './styles/App.css'
 import { Nav } from './components/Nav'
-import { GetStarted } from './components/GetStarted';
-import { Components } from './components/Components';
-import { Presentation } from './components/Presentation';
+import { GetStarted } from './pages/GetStarted';
+import { Components } from './pages/Components';
+import { Presentation } from './pages/Presentation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import englishTranslations from './translations/en.json';
 import spanishTranslations from './translations/es.json';

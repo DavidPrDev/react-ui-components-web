@@ -1,9 +1,19 @@
 {
-    "btn-started": "Empezar",
+    "btn-started": "Comenzar",
     "btn-components": "Componentes",
     "sub-title":"Una pequeña biblioteca para react con varios componentes de interfaz de usuario.",
     "change-lang":"Cambiar idioma",
-    "title-instalation":"Instalacion",
+    "title-instalation":"Instalación",
     "txt-instalation":"Para instalar la biblioteca, deberá ejecutar el siguiente comando.",
-    "copy":"copiar"
+    "copy":"copiar",
+    "requisites":"Requisitos previos",
+    "txt-requisites":"Para esta librería necesita tener un proyecto react generado por vite. Puede consultar la documentación en la página de vite .",
+    "txt-vite-tutorial":"Documentación en vite.",
+    "txt-import":"Una vez instalada la biblioteca podrá importar el módulo de la siguiente manera:",
+    "components-txt":"Con la biblioteca instalada tendremos acceso a estos componentes:",
+    "dev-route":"En la ruta de desarrollo esta pensado implementar mas componentes que se estas desarrollando como alguno de los siguientes:",
+    "nav":"Barra de navegación",
+    "form":"Formularios",
+    "btn":"Botones"
+    
 }

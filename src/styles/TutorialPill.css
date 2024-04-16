@@ -1,0 +1,21 @@
+.container-pills{
+  margin-bottom: 5%;
+}
+.subtitle{
+text-align: left;
+border-bottom: 1px solid rgba(255, 255, 255, 0.481);
+padding-left: 5%;
+white-space: nowrap;
+}
+.a-pill {
+  text-decoration: none;
+  color: #6788b8;
+  padding:5px;
+  font-weight: bold;
+  
+ 
+}
+
+.a-pill:hover {
+  color: #405677;
+}

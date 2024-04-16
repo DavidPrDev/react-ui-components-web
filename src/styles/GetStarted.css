@@ -7,13 +7,10 @@
     flex-direction: column;
     width: 60%;
 }
-
 .title{
-  text-align: center;
+    text-align: center;
 }
-
-.subtitle{
-  text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.481);
-  padding-left: 30px;
+.ul-components{
+    margin-top: -5%;
 }
+  

@@ -26,14 +26,14 @@ export const Nav = () => {
                 <Link className='major-logo' to="/"><FaReact size={40} /></Link></div>
             <nav>
                 <ul className='ul-content'>
-                    <li>
+                    <li className='li-nav'>
                         <Link className='a-decoration' to="/get-started">{t('btn-started')}</Link>
                     </li>
-                    <li><Link className='a-decoration' to="/components">{t('btn-components')}</Link></li>
+                    <li className='li-nav'><Link className='a-decoration' to="/components">{t('btn-components')}</Link></li>
                 </ul>
                 <ul className='ul-links'>
 
-                    <li className='container-lang'>
+                    <li className='container-lang li-nav'>
                         <Tooltip text={t('change-lang')} direction='bottom'>
                             <button className={`btn-language ${activeEs && 'active'}`} onClick={() => changeLanguage("es")}>ES</button>
                             <button className={`btn-language ${activeEn && 'active'}`} onClick={() => changeLanguage("en")} >EN</button>
@@ -41,7 +41,7 @@ export const Nav = () => {
                     </li>
 
 
-                    <li >
+                    <li className='li-nav'>
                         <a className='a-decoration' href="https://github.com/DavidPrDev/react-ui-components"><AiFillGithub size={25} /></a>
                         <a className='a-decoration' href="https://www.linkedin.com/in/david-p%C3%A9rez-romero-b8a57a292/"><CiLinkedin size={26} /></a>
                     </li>

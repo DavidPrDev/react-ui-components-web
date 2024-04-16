@@ -1,0 +1,21 @@
+.code-container {
+    position: relative;
+  }
+  
+  .code {
+    border-radius: 10px;
+    padding: 10px !important;
+  }
+  
+  .copy-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .txt-code {
+    text-align: left;
+  }
+  
