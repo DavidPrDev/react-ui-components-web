@@ -182,20 +182,20 @@ export const Components = () => {
 
                 <p>Live demo: </p>
                 <div className='container-live-demo'>
-                    <label className='label-demo' htmlFor="selectDirection">
+                    <label className='label-demo' htmlFor="selectDocument">
                         Select type:
-                        <select className='select-dierection' id="selectDirection" onChange={(event) => setType(event.target.value)} >
+                        <select className='select-dierection' id="selectDocument" onChange={(event) => setType(event.target.value)} >
                             <option value='document'>Document</option>
                             <option value='image'>Image</option>
                         </select>
                     </label>
-                    <label className='label-demo' htmlFor="cbox1">
+                    <label className='label-demo' htmlFor="cbox5">
                         Multiple
-                        <input onChange={() => setMultiple(true)} type="radio" name="multiple" id="cbox1" checked={multiple} />
+                        <input onChange={() => setMultiple(true)} type="radio" name="multiple" id="cbox5" checked={multiple} />
                     </label>
-                    <label className='label-demo' htmlFor="cbox2">
+                    <label className='label-demo' htmlFor="cbox6">
                         Individual
-                        <input onChange={() => setMultiple(false)} type="radio" id="cbox2" name="individual" checked={!multiple} />
+                        <input onChange={() => setMultiple(false)} type="radio" id="cbox6" name="individual" checked={!multiple} />
                     </label>
 
                 </div>
