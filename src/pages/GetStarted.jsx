@@ -11,7 +11,7 @@ export const GetStarted = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="container">
+        <div className="container-page">
             <h1 className='title'>{t('btn-started')}</h1>
 
             <TutorialPill

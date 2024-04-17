@@ -17,5 +17,8 @@
     "btn":"Botones",
     "txt-modal":"Para usar este componente debemos importar este paquete:",
     "txt-modal-btn":"En este caso deberemos crear un función para abrir el modal :",
-    "simple-props-modal":"Estas son las props mínimos que el componente necesita para funcionar."
+    "simple-props-modal":"Estas son las props mínimos que el componente necesita para funcionar.",
+    "modal-extra-props":"Si agrega una función de confirmación y pasa la propiedad confirm={true} al modal, se convertirá en una ventana de confirmación.",
+    "dir-modal":"La prop de dirección admite 4 tipos, bottom, top, left, right, lo que hará que el modal aparezca en ese lado.",
+    "full-code":"Codigo completo :"
 }

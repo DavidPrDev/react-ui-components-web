@@ -75,3 +75,12 @@ nav {
   .btn-language.active {
     background-color: #31425c; 
   }
+  @media screen and (max-width: 675px) {
+    .ul-content{
+        font-size: 17px;
+        align-items: center;
+    }
+    .li-nav {
+        padding: 0;
+    }
+}

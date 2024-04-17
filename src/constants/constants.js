@@ -2,14 +2,26 @@ export const modalBtn=`const [modalOpen, setModalOpen] = useState(false);
 
 <button onClick={() => setModalOpen(true)}>Open Modal</button>`;
 
-  export const modalComponentOutConfirm=`        <Modal
-       isOpen={modalOpen}
-       setOpen={setModalOpen}
-       direction='bottom'
-       title="Detalles sobre un producto "
-      >
-        <p>Example text in the body of modal. </p>
-      </Modal>`;
+export const modalComponentOutConfirm=`        <Modal
+      isOpen={modalOpen}
+      setOpen={setModalOpen}
+      direction='bottom'
+      title="Example title"
+    >
+      <p>Example text in the body of modal. </p>
+    </Modal>`;
+
+export const modalConfirm=`
+const [confirm, setConfirm] = useState(false);
+
+      <Modal
+        isOpen={modalOpen}
+        setOpen={setModalOpen}
+        direction='bottom'
+        title="Example title"
+        confirm={true}
+        setConfirm={setConfirm}
+      >`
 
 export const modalFunction = `
 import React, { useState } from 'react';
@@ -27,7 +39,7 @@ const App = () => {
         isOpen={modalOpen}
         setOpen={setModalOpen}
         direction='bottom'
-        title="Detalles sobre un producto "
+        title="Example title"
         confirm={true}
         setConfirm={setConfirm}
       >

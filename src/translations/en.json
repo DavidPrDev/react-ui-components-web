@@ -17,5 +17,8 @@
     "btn":"Buttons",
     "txt-modal":"To use this component we must import this package",
     "txt-modal-btn":"In this case we will have to create a function to open the modal:",
-    "simple-props-modal":"These are the minimum accessories that the component needs to function."
+    "simple-props-modal":"These are the minimum props that the component needs to function.",
+    "modal-extra-props":"If you add a confirmation function and pass the confirm={true} prop to the modal, it will become a confirmation window.",
+    "dir-modal":"The direction accessory supports 4 types, down, up, left, right, which will make the modal appear on that side.",
+    "full-code":"Complete code :"
 }

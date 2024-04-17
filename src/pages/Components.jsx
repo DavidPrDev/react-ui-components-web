@@ -2,14 +2,22 @@ import '../styles/Components.css'
 import { useTranslation } from 'react-i18next';
 import { TutorialPill } from '../components/TutorialPill';
 import { CodeContainer } from '../components/CodeContainer';
-import { modalFunction, modalBtn, modalComponentOutConfirm } from '../constants/constants';
+import { modalFunction, modalBtn, modalComponentOutConfirm, modalConfirm } from '../constants/constants';
+import { Modal } from 'react-ui-components-dpr';
+import { useState } from 'react';
 
 export const Components = () => {
 
     const { t } = useTranslation();
 
+    const [modalOpen, setModalOpen] = useState(false);
+    const [confirm, setConfirm] = useState(false);
+
+    const [direction, setDirection] = useState('bottom')
+    const [confirmation, setConfirmation] = useState(false)
+
     return (
-        <div className="container">
+        <div className="container-page">
             <h1 className='title'>{t('btn-components')}</h1>
 
             <div id="modal">
@@ -30,6 +38,68 @@ export const Components = () => {
                     text={t('simple-props-modal')}
                     code={modalComponentOutConfirm}
                 />
+                <CodeContainer
+                    text={t('modal-extra-props')}
+                    code={modalConfirm}
+                />
+
+                <CodeContainer
+                    text={t('dir-modal')}
+                    code={`direction='bottom' // or top,left,right`}
+                />
+
+                <p>Live demo :</p>
+
+                {confirmation == false ?
+                    <Modal
+                        isOpen={modalOpen}
+                        setOpen={setModalOpen}
+                        direction={direction}
+                        title="Title Example"
+                    >
+                        Example body
+                    </Modal>
+                    :
+                    <Modal
+                        isOpen={modalOpen}
+                        setOpen={setModalOpen}
+                        direction={direction}
+                        title="Title Example"
+                        confirm={true}
+                        setConfirm={setConfirm}
+                    >
+                        Example body
+                    </Modal>
+                }
+                <button className='btn-modal' onClick={() => setModalOpen(true)}>Open Modal</button>
+
+                <div className='container-live-demo'>
+                    <label className='label-demo' htmlFor="selectDirection">
+                        Select the direction:
+                        <select className='select-dierection' onChange={(event) => setDirection(event.target.value)} >
+                            <option>bottom</option>
+                            <option>top</option>
+                            <option>left</option>
+                            <option>right</option>
+                        </select>
+                    </label>
+                    <label className='label-demo' htmlFor="cbox1">
+                        Confirm
+                        <input onChange={() => setConfirmation(true)} type="radio" name="confirmation" checked={confirmation} />
+                    </label>
+                    <label className='label-demo' htmlFor="cbox2">
+                        Without confirm
+                        <input onChange={() => setConfirmation(false)} type="radio" name="outConfirmation" checked={!confirmation} />
+                    </label>
+
+                </div>
+
+
+                <CodeContainer
+                    text={t('full-code')}
+                    code={modalFunction}
+                />
+
 
             </div>
 
