@@ -31,15 +31,34 @@ cursor: pointer;
 .container-live-demo {
     display: flex;  
     align-items: center; 
+    margin-bottom: 5%;
 }
-
+.tooltip-target{
+    border: 1px solid white;
+    border-radius:10px ;
+    padding: 10px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+}
 .label-demo {
     display: flex;
     flex-direction: column;
     margin: auto;
     color: white;
   }
+  .container-tooltip{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+.container-drag{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    margin: auto;
 
+}
   @media screen and (max-width: 675px) {
     .container-live-demo {
         flex-direction: column;

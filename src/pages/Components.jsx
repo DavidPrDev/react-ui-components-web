@@ -2,8 +2,18 @@ import '../styles/Components.css'
 import { useTranslation } from 'react-i18next';
 import { TutorialPill } from '../components/TutorialPill';
 import { CodeContainer } from '../components/CodeContainer';
-import { modalFunction, modalBtn, modalComponentOutConfirm, modalConfirm } from '../constants/constants';
-import { Modal } from 'react-ui-components-dpr';
+import {
+    modalFunction,
+    modalBtn,
+    modalComponentOutConfirm,
+    modalConfirm,
+    tooltipComp,
+    tooltipFunction,
+    dragComponent,
+    importDrag,
+    dragFunction
+} from '../constants/constants';
+import { Modal, Tooltip, DragAndDrop } from 'react-ui-components-dpr';
 import { useState } from 'react';
 
 export const Components = () => {
@@ -12,9 +22,13 @@ export const Components = () => {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [confirm, setConfirm] = useState(false);
+    const [file, setFile] = useState(null);
+    const [direction, setDirection] = useState('bottom');
+    const [confirmation, setConfirmation] = useState(false);
+    const [type, setType] = useState('document');
+    const [multiple, setMultiple] = useState(false);
 
-    const [direction, setDirection] = useState('bottom')
-    const [confirmation, setConfirmation] = useState(false)
+
 
     return (
         <div className="container-page">
@@ -76,7 +90,7 @@ export const Components = () => {
                 <div className='container-live-demo'>
                     <label className='label-demo' htmlFor="selectDirection">
                         Select the direction:
-                        <select className='select-dierection' onChange={(event) => setDirection(event.target.value)} >
+                        <select className='select-dierection' id="selectDirection" onChange={(event) => setDirection(event.target.value)} >
                             <option>bottom</option>
                             <option>top</option>
                             <option>left</option>
@@ -85,11 +99,11 @@ export const Components = () => {
                     </label>
                     <label className='label-demo' htmlFor="cbox1">
                         Confirm
-                        <input onChange={() => setConfirmation(true)} type="radio" name="confirmation" checked={confirmation} />
+                        <input onChange={() => setConfirmation(true)} type="radio" name="confirmation" id="cbox1" checked={confirmation} />
                     </label>
                     <label className='label-demo' htmlFor="cbox2">
                         Without confirm
-                        <input onChange={() => setConfirmation(false)} type="radio" name="outConfirmation" checked={!confirmation} />
+                        <input onChange={() => setConfirmation(false)} type="radio" id="cbox2" name="outConfirmation" checked={!confirmation} />
                     </label>
 
                 </div>
@@ -105,22 +119,109 @@ export const Components = () => {
 
             <div id="tooltip">
                 <TutorialPill
-                    title={t('requisites')}
-                    text={t('txt-requisites')}
-                    component={<CodeContainer code='npm create vite@latest my-app' />}
-                    link={"https://vitejs.dev/guide/"}
-                    textLink={t('txt-vite-tutorial')}
+                    title="Tooltip"
+                    text={t('txt-modal')}
+                    component={<CodeContainer code={`import { Tooltip } from 'react-ui-components-dpr';`} />}
+                />
+
+                <CodeContainer
+                    text={t('txt-tooltip')}
+                    code={tooltipComp}
+                />
+
+                <CodeContainer
+                    text={t('tooltip-props')}
+                    code={`direction='bottom' //or top`}
+                />
+
+                <p>Live demo :</p>
+                <div className='container-live-demo'>
+                    <label className='label-demo' htmlFor="cbox3">
+                        Bottom
+                        <input onChange={() => setDirection('bottom')} type="radio" name="confirmationt" id="cbox3" checked={direction === 'bottom'} />
+                    </label>
+                    <label className='label-demo' htmlFor="cbox4">
+                        Top
+                        <input onChange={() => setDirection('top')} type="radio" id="cbox4" name="outConfirmationt" checked={direction === 'top'} />
+                    </label>
+                </div>
+                <div className='container-tooltip'>
+                    <Tooltip text='Text example' direction={direction}>
+                        <p className='tooltip-target'>Hover mi 🖱️</p>
+                    </Tooltip>
+                </div>
+
+
+                <CodeContainer
+                    text={t('full-code')}
+                    code={tooltipFunction}
                 />
             </div>
 
             <div id="daragAnDdrop">
                 <TutorialPill
-                    title={t('requisites')}
-                    text={t('txt-requisites')}
-                    component={<CodeContainer code='npm create vite@latest my-app' />}
-                    link={"https://vitejs.dev/guide/"}
-                    textLink={t('txt-vite-tutorial')}
+                    title="Drag & drop"
+                    text={t('import-drag')}
+                    component={<CodeContainer code={importDrag} />}
                 />
+
+                <CodeContainer
+                    text={t('txt-drag')}
+                    code={dragComponent}
+                />
+
+                <CodeContainer
+                    text={t('props-drag')}
+                    code={`type='document' // or image`}
+                />
+
+                <CodeContainer
+                    text={t('props-drag-multi')}
+                    code={`multiple={true}`}
+                />
+
+                <p>Live demo: </p>
+                <div className='container-live-demo'>
+                    <label className='label-demo' htmlFor="selectDirection">
+                        Select type:
+                        <select className='select-dierection' id="selectDirection" onChange={(event) => setType(event.target.value)} >
+                            <option value='document'>Document</option>
+                            <option value='image'>Image</option>
+                        </select>
+                    </label>
+                    <label className='label-demo' htmlFor="cbox1">
+                        Multiple
+                        <input onChange={() => setMultiple(true)} type="radio" name="multiple" id="cbox1" checked={multiple} />
+                    </label>
+                    <label className='label-demo' htmlFor="cbox2">
+                        Individual
+                        <input onChange={() => setMultiple(false)} type="radio" id="cbox2" name="individual" checked={!multiple} />
+                    </label>
+
+                </div>
+                <div className='container-drag'>
+                    {multiple == false ?
+                        <DragAndDrop
+                            setFile={setFile}
+                            file={file}
+                            type={type}
+                        />
+                        :
+                        <DragAndDrop
+                            multiple={true}
+                            setFile={setFile}
+                            file={file}
+                            type={type}
+                        />
+                    }
+
+                </div>
+                <CodeContainer
+                    text={t('full-code')}
+                    code={dragFunction}
+                />
+
+
             </div>
         </div>
 

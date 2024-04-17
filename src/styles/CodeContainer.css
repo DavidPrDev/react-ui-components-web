@@ -6,6 +6,7 @@
   .code {
     border-radius: 10px;
     padding: 10px !important;
+    padding-right: 45px!important;
   }
   
   .copy-icon {
@@ -15,6 +16,7 @@
     transform: translateY(-50%);
     cursor: pointer;
     color: white;
+
   }
   
   .txt-code {

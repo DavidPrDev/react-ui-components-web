@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    
 }
 .btn-get-started{
     margin-right: 25px;
@@ -21,4 +21,10 @@
     color: white;
     padding: 8px;
     border-radius: 5px;
+    margin-bottom: 60px;
+}
+@media screen and (max-width: 675px) {
+    .btn-container{
+        flex-direction: column;
+    }
 }

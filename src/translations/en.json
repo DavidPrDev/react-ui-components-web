@@ -20,5 +20,11 @@
     "simple-props-modal":"These are the minimum props that the component needs to function.",
     "modal-extra-props":"If you add a confirmation function and pass the confirm={true} prop to the modal, it will become a confirmation window.",
     "dir-modal":"The direction accessory supports 4 types, down, up, left, right, which will make the modal appear on that side.",
-    "full-code":"Complete code :"
+    "full-code":"Complete code :",
+    "txt-tooltip":"In this case we will have to wrap the specific element with the tooltip component.",
+    "tooltip-props":"This component accepts two props, text for the text to display, and direction for the position of the tooltip(top/bottom).",
+    "txt-drag":"These are the minimum props that the component needs.",
+    "props-drag":"We can specify the document type for , .pdf, word, excel , .odt or .txt .With the image type it allows the loading of jpeg, png, gif, webp and svg+xml",
+    "props-drag-multi":"With the multiple prop we can upload several files at the same time.",
+    "import-drag":"To use this component we must import this package and declare a setFile function."
 }
