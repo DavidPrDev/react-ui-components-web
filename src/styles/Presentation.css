@@ -5,12 +5,13 @@
     align-items: center;
     margin-top: 10%;
     color:white;
-    text-align: center;
+    text-align: center; 
 }
+
 .btn-container{
     flex-direction: row;
     display: flex;
-    align-items: center;
+    width: 60%;
     justify-content: center;
     
 }
@@ -21,10 +22,14 @@
     color: white;
     padding: 8px;
     border-radius: 5px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
+    white-space: nowrap;
 }
 @media screen and (max-width: 675px) {
     .btn-container{
         flex-direction: column;
+    }
+    .container-pages{
+        width: 120%;
     }
 }

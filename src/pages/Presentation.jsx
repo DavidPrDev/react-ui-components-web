@@ -8,19 +8,24 @@ export const Presentation = () => {
     const { t } = useTranslation();
 
     return (
-        <div className='container-presentation'>
-            <h1>React-ui-components</h1>
-            <p className='sub-title'>{t('sub-title')}</p>
+        <>
+            <div className='container-presentation'>
+                <h1>React-ui-components</h1>
+                <p className='sub-title'>{t('sub-title')}</p>
 
-            <div className='btn-container'>
+                <div className='btn-container'>
 
-                <Link className='btn-get-started' to="/get-started">{t('btn-started')}</Link>
-                <CodeContainer
-                    code={`npm install react-ui-components-dpr`}
-                />
+                    <Link className='btn-get-started' to="/get-started">{t('btn-started')}</Link>
+
+                    <div className='container-pages'>
+                        <CodeContainer
+                            code={`npm install react-ui-components-dpr`}
+                        />
+                    </div>
+                </div>
 
             </div>
 
-        </div>
+        </>
     )
 }

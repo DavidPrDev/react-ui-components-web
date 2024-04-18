@@ -1,12 +1,14 @@
 .code-container {
     position: relative;
     margin-bottom: 10%;
+  
   }
   
   .code {
     border-radius: 10px;
     padding: 10px !important;
     padding-right: 45px!important;
+   
   }
   
   .copy-icon {

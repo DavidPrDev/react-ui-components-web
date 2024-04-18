@@ -11,7 +11,7 @@ export const Nav = () => {
     const { t, i18n } = useTranslation();
     const [activeEs, setActiveEs] = useState(false)
     const [activeEn, setActiveEn] = useState(true)
-
+    const [show, setShow] = useState(false)
     const changeLanguage = (languageCode) => {
 
         languageCode == 'es' ? setActiveEs(true) : setActiveEs(false);
@@ -23,23 +23,23 @@ export const Nav = () => {
     return (
         <header>
             <div className='container-logo'>
-                <Link className='major-logo' to="/"><FaReact size={40} /></Link></div>
+                <Link className='major-logo' to="/"><FaReact size={40} /></Link>
+            </div>
             <nav>
-                <ul className='ul-content'>
+                <ul className={`ul-content ${show && 'show'}`}>
                     <li className='li-nav'>
                         <Link className='a-decoration' to="/get-started">{t('btn-started')}</Link>
                     </li>
                     <li className='li-nav'><Link className='a-decoration' to="/components">{t('btn-components')}</Link></li>
                 </ul>
+                <button className='collapse-btn' onClick={() => setShow(!show)}>👌</button>
                 <ul className='ul-links'>
-
                     <li className='container-lang li-nav'>
                         <Tooltip text={t('change-lang')} direction='bottom'>
                             <button className={`btn-language ${activeEs && 'active'}`} onClick={() => changeLanguage("es")}>ES</button>
                             <button className={`btn-language ${activeEn && 'active'}`} onClick={() => changeLanguage("en")} >EN</button>
                         </Tooltip>
                     </li>
-
 
                     <li className='li-nav'>
                         <a className='a-decoration' href="https://github.com/DavidPrDev/react-ui-components"><AiFillGithub size={25} /></a>

@@ -62,28 +62,29 @@ export const Components = () => {
                 />
 
                 <p>Live demo :</p>
-
-                {confirmation == false ?
-                    <Modal
-                        isOpen={modalOpen}
-                        setOpen={setModalOpen}
-                        direction={direction}
-                        title="Title Example"
-                    >
-                        Example body
-                    </Modal>
-                    :
-                    <Modal
-                        isOpen={modalOpen}
-                        setOpen={setModalOpen}
-                        direction={direction}
-                        title="Title Example"
-                        confirm={true}
-                        setConfirm={setConfirm}
-                    >
-                        Example body
-                    </Modal>
-                }
+                <div className='container-modal'>
+                    {confirmation == false ?
+                        <Modal
+                            isOpen={modalOpen}
+                            setOpen={setModalOpen}
+                            direction={direction}
+                            title="Title Example"
+                        >
+                            Example body
+                        </Modal>
+                        :
+                        <Modal
+                            isOpen={modalOpen}
+                            setOpen={setModalOpen}
+                            direction={direction}
+                            title="Title Example"
+                            confirm={true}
+                            setConfirm={setConfirm}
+                        >
+                            Example body
+                        </Modal>
+                    }
+                </div>
                 <button className='btn-modal' onClick={() => setModalOpen(true)}>Open Modal</button>
 
                 <div className='container-live-demo'>
