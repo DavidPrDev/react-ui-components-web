@@ -59,12 +59,15 @@ cursor: pointer;
     margin: auto;
 
 }
+.select-dierection{
+    margin-top: 5px;
+}
   @media screen and (max-width: 675px) {
     .container-live-demo {
         flex-direction: column;
     }
 
     .label-demo {
-        margin-top: 10px; /* Ajusta el margen superior para separar los elementos */
+        margin-top: 10px; 
     }
 }

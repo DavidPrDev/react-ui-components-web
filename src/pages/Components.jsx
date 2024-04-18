@@ -29,7 +29,6 @@ export const Components = () => {
     const [multiple, setMultiple] = useState(false);
 
 
-
     return (
         <div className="container-page">
             <h1 className='title'>{t('btn-components')}</h1>
@@ -89,7 +88,7 @@ export const Components = () => {
 
                 <div className='container-live-demo'>
                     <label className='label-demo' htmlFor="selectDirection">
-                        Select the direction:
+                        Select direction:
                         <select className='select-dierection' id="selectDirection" onChange={(event) => setDirection(event.target.value)} >
                             <option>bottom</option>
                             <option>top</option>
@@ -115,47 +114,6 @@ export const Components = () => {
                 />
 
 
-            </div>
-
-            <div id="tooltip">
-                <TutorialPill
-                    title="Tooltip"
-                    text={t('txt-modal')}
-                    component={<CodeContainer code={`import { Tooltip } from 'react-ui-components-dpr';`} />}
-                />
-
-                <CodeContainer
-                    text={t('txt-tooltip')}
-                    code={tooltipComp}
-                />
-
-                <CodeContainer
-                    text={t('tooltip-props')}
-                    code={`direction='bottom' //or top`}
-                />
-
-                <p>Live demo :</p>
-                <div className='container-live-demo'>
-                    <label className='label-demo' htmlFor="cbox3">
-                        Bottom
-                        <input onChange={() => setDirection('bottom')} type="radio" name="confirmationt" id="cbox3" checked={direction === 'bottom'} />
-                    </label>
-                    <label className='label-demo' htmlFor="cbox4">
-                        Top
-                        <input onChange={() => setDirection('top')} type="radio" id="cbox4" name="outConfirmationt" checked={direction === 'top'} />
-                    </label>
-                </div>
-                <div className='container-tooltip'>
-                    <Tooltip text='Text example' direction={direction}>
-                        <p className='tooltip-target'>Hover mi 🖱️</p>
-                    </Tooltip>
-                </div>
-
-
-                <CodeContainer
-                    text={t('full-code')}
-                    code={tooltipFunction}
-                />
             </div>
 
             <div id="daragAnDdrop">
@@ -221,9 +179,49 @@ export const Components = () => {
                     code={dragFunction}
                 />
 
-
             </div>
-        </div>
 
+            <div id="tooltip">
+                <TutorialPill
+                    title="Tooltip"
+                    text={t('txt-modal')}
+                    component={<CodeContainer code={`import { Tooltip } from 'react-ui-components-dpr';`} />}
+                />
+
+                <CodeContainer
+                    text={t('txt-tooltip')}
+                    code={tooltipComp}
+                />
+
+                <CodeContainer
+                    text={t('tooltip-props')}
+                    code={`direction='bottom' //or top`}
+                />
+
+                <p>Live demo :</p>
+                <div className='container-live-demo'>
+                    <label className='label-demo' htmlFor="cbox3">
+                        Bottom
+                        <input onChange={() => setDirection('bottom')} type="radio" name="confirmationt" id="cbox3" checked={direction === 'bottom'} />
+                    </label>
+                    <label className='label-demo' htmlFor="cbox4">
+                        Top
+                        <input onChange={() => setDirection('top')} type="radio" id="cbox4" name="outConfirmationt" checked={direction === 'top'} />
+                    </label>
+                </div>
+                <div className='container-tooltip'>
+                    <Tooltip text='Text example' direction={direction}>
+                        <p className='tooltip-target'>Hover mi 🖱️</p>
+                    </Tooltip>
+                </div>
+
+
+                <CodeContainer
+                    text={t('full-code')}
+                    code={tooltipFunction}
+                />
+            </div>
+
+        </div>
     )
 }

@@ -46,7 +46,7 @@ export const GetStarted = () => {
             </ul>
 
             <p>{t('dev-route')}</p>
-            <ul >
+            <ul className='ul-roadmap'>
                 <li>{t('form')}</li>
                 <li>{t('nav')}</li>
                 <li>{t('btn')}</li>

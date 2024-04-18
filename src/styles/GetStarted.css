@@ -14,8 +14,12 @@ p{
     text-align: center;
     color:white
 }
+.ul-roadmap{
+    color: white;
+}
 .ul-components{
     margin-top: -5%;
+    color: white;
 }
 @media screen and (max-width: 675px) {
     .container-page {
