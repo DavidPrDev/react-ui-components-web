@@ -4,6 +4,7 @@ html,body{
   width: 100%;
   height: auto;
   font-size: 18px;
+ overflow-x: hidden;
 }
 
 p,label,ul{

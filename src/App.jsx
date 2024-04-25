@@ -2,6 +2,7 @@ import './styles/App.css'
 import { Nav } from './components/Nav'
 import { GetStarted } from './pages/GetStarted';
 import { Components } from './pages/Components';
+import { NotFound } from './pages/NotFound';
 import { Presentation } from './pages/Presentation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import englishTranslations from './translations/en.json';
@@ -34,6 +35,7 @@ function App() {
             <Route path="/" exact element={<Presentation />} />
             <Route path="/get-started" exact element={<GetStarted />} />
             <Route path="/components" exact element={<Components />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </I18nextProvider>
 
