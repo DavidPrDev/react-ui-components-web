@@ -28,5 +28,7 @@
     .btn-container{
         flex-direction: column;
     }
-   
+    .container-pages{
+        width: 80%;
+    }
 }
