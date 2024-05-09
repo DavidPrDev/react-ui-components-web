@@ -57,6 +57,7 @@ export const Nav = () => {
                         <Link className='a-decoration' to="/get-started">{t('btn-started')}</Link>
                     </li>
                     <li className='li-collapse'><Link className='a-decoration' to="/components">{t('btn-components')}</Link></li>
+                    <li className='li-collapse'><a className='a-decoration' href='https://react-ui-components.david-pr.com/doc/?path=/docs/'>Storybook documentation</a></li>
                 </ul>
                 <div className='collapse-btn' onClick={sidebarOpen ? closeSidebar : openSidebar}>
                     {sidebarOpen ? <button className='btn-menu close'><IoCloseCircleOutline size={40} /></button> : <button className='btn-menu open'><IoMdMenu size={40} /></button>}
